@@ -13,9 +13,7 @@ app.use(express.urlencoded({extended: true}))
 
 //handlers can use next in a handler!
 app.get('/', (req, res, next) => {
-    setTimeout(() => {
-        next(new Error('hello'))
-    }, 1)
+    res.json({message: 'hello'})
 })
 
 //use is not http - but allows you to 
